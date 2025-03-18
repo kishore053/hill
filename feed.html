@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .feedback-form {
+      background: gray;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .feedback-form h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .feedback-form label {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .feedback-form input,
+    .feedback-form textarea,
+    .feedback-form select,
+    .feedback-form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .feedback-form button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+    }
+    .feedback-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form class="feedback-form" action="submit_feedback.php" method="POST">
+    <h2> Project Feed Back</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email" required>
+
+    <label for="rating">Rating</label>
+    <select id="rating" name="rating" required>
+      <option value="" disabled selected>Choose a rating</option>
+      <option value="1">1 - Poor</option>
+      <option value="2">2 - Fair</option>
+      <option value="3">3 - Good</option>
+      <option value="4">4 - Very Good</option>
+      <option value="5">5 - Excellent</option>
+    </select>
+
+    <label for="comments">Comments</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Your comments" required></textarea>
+
+    <button type="submit"><a href="su.html">Submit Feedback</button></a> </form>
+</body>
+</html>

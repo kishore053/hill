@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Vegetable & Fruit Cart</title>
+  <style>
+    body {
+		background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: 100% 100%;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:black;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #FFEBCD;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+    }
+ h2 {
+      text-align: center;
+      color: black;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .product:last-child {
+      border-bottom: none;
+    }
+
+    .product-details {
+      display: flex;
+      align-items: center;
+    }
+
+    .product-details img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+      border-radius: 8px;
+    }
+
+    .product-details h2 {
+      font-size: 18px;
+      margin: 0;
+      color: #333;
+    }
+
+    .product-details p {
+      margin: 5px 0;
+      font-size: 14px;
+      color:black
+    }
+
+    .price {
+      font-weight: bold;
+      color: black;
+    }
+
+    .btn {
+      padding: 8px 15px;
+      font-size: 14px;
+      border: none;
+      background-color: #4caf50;
+      color: black;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background-color: white;
+    }
+
+    .buy-link {
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .buy-link:hover {
+      text-decoration: underline;
+      color: black;
+    }
+
+    .cart {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .cart h2 {
+      margin: 0 0 10px;
+    }
+
+    .cart-items {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart-items li {
+      padding: 5px 0;
+    }
+
+    .total-amount {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<body background= "C:\Users\Admin\Desktop\cilent1\farm.jpg" >
+  <div class="container">
+    <h1>Vegetable,Fruit and Milk Products </h1>
+<h2>ತರಕಾರಿಗಳು ಹಣ್ಣುಗಳು ಮತ್ತು ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು</h2>
+
+    <h4> Vegetables-ತರಕಾರಿಗಳು</h4>
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\images.jpg" alt="Tomato">
+        <div>
+          <h2>Tomato</h2>
+          <p class="price">₹40 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Tomato" data-price="40">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\pot.jpg" alt="Potato">
+        <div>
+          <h2>Potato</h2>
+          <p class="price">₹25 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Potato" data-price="25">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\car.jpg" alt="Carrot">
+        <div>
+          <h2>Carrot</h2>
+          <p class="price">₹60 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Carrot" data-price="60">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\cab.jpg" alt="Cabbage">
+        <div>
+          <h2>Cabbage</h2>
+          <p class="price">₹30 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Cabbage" data-price="30">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\rad.jpg" alt="Raddish">
+        <div>
+          <h2>Raddish</h2>
+          <p class="price">₹80 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Broccoli" data-price="80">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\oni.jpg" alt="Onion">
+        <div>
+          <h2>Onion</h2>
+          <p class="price">₹20 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Onion" data-price="20">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\pal.jpg" alt="Palak Leaf">
+        <div>
+          <h2>Palk Leaf</h2>
+          <p class="price">₹15 per bunch</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Spinach" data-price="15">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\cali.jpg" alt="Cauliflower">
+        <div>
+          <h2>Cauliflower</h2>
+          <p class="price">₹50 each</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Cauliflower" data-price="50">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\peas.jpg" alt="Peas">
+        <div>
+          <h2>Peas</h2>
+          <p class="price">₹100 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Peas" data-price="100">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\cap.jpg" alt="Capsicum">
+        <div>
+          <h2>Capsicum</h2>
+          <p class="price">₹70 each</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Capsicum" data-price="70">Add to Cart</button>
+    </div>
+
+    <h4> Fruits-ಹಣ್ಣುಗಳು</h4>
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\app.jpg" alt="Apple">
+        <div>
+          <h2>Apple</h2>
+          <p class="price">₹150 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Apple" data-price="150">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\man.jpg" alt="Mango">
+        <div>
+          <h2>Mango</h2>
+          <p class="price">₹200 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Mango" data-price="200">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\ban.jpg" alt="Banana">
+        <div>
+          <h2>Banana</h2>
+          <p class="price">₹30 per bunch</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Banana" data-price="30">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\ora.jpg" alt="Orange">
+        <div>
+          <h2>Orange</h2>
+          <p class="price">₹100 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Orange" data-price="100">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\gra.jpg" alt="Grapes">
+        <div>
+          <h2>Grapes</h2>
+          <p class="price">₹120 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Grapes" data-price="120">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\pina.jpg" alt="Pineapple">
+        <div>
+          <h2>Pineapple</h2>
+          <p class="price">₹60 each</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Pineapple" data-price="60">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\papa.jpg" alt="Papaya">
+        <div>
+          <h2>Papaya</h2>
+          <p class="price">₹50 each</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Papaya" data-price="50">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\water.jpg" alt="Watermelon">
+        <div>
+          <h2>Watermelon</h2>
+          <p class="price">₹30 per kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Watermelon" data-price="30">Add to Cart</button>
+    </div>
+
+    <h4> Milk Products-ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು</h4>
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\but.jpg" alt="Butter">
+        <div>
+          <h2>Butter</h2>
+          <p class="price">₹250 per 500g</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Butter" data-price="250">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\gee.jpg" alt="Ghee">
+        <div>
+          <h2>Ghee</h2>
+          <p class="price">₹500 per 1 kg</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Ghee" data-price="500">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\milk.jpg" alt="Milk">
+        <div>
+          <h2>Milk</h2>
+          <p class="price">₹40 per litre</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Milk" data-price="40">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-details">
+        <img src="C:\Users\Admin\Desktop\cilent1\chee.jpg" alt="Cheese">
+        <div>
+          <h2>Cheese</h2>
+          <p class="price">₹250 per 500g</p>
+        </div>
+      </div>
+      <button class="btn add-to-cart" data-name="Cheese" data-price="250">Add to Cart</button>
+    </div>
+
+    <div
+<div class="container">
+    <h1>Your Cart</h1>
+
+    <!-- Vegetables, Fruits, and Milk Products (same as before) -->
+
+    <!-- Cart Section -->
+    <div class="cart">
+      <h2>Shopping Cart</h2>
+      <ul class="cart-items"></ul>
+      <p class="total-amount">Total: ₹0</p>
+      <a href="buy.html" class="buy.html" id="buy.html"><button submit>Buy Now</button></a>
+      <button class="clear-cart-btn" id="clear-cart">Clear Cart</button>
+    </div>
+  </div>
+
+  <script>
+    let totalAmount = 0;
+    const cartItems = document.querySelector('.cart-items');
+    const totalAmountElement = document.querySelector('.total-amount');
+    const buyNowLink = document.getElementById('buy-now');
+    const clearCartButton = document.getElementById('clear-cart');
+    const buttons = document.querySelectorAll('.add-to-cart');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const name = button.getAttribute('data-name');
+        const price = parseFloat(button.getAttribute('data-price'));
+
+        // Add item to cart
+        const item = document.createElement('li');
+        item.textContent = `${name} - ₹${price}`;
+        cartItems.appendChild(item);
+
+        // Update total amount
+        totalAmount += price;
+        totalAmountElement.textContent = `Total: ₹${totalAmount}`;
+
+        // Update Buy Now link
+        buyNowLink.href = `https://www.example.com/checkout?total=${totalAmount}`;
+      });
+    });
+
+    // Clear cart functionality
+    clearCartButton.addEventListener('click', () => {
+      cartItems.innerHTML = '';  // Clear cart items
+      totalAmount = 0;           // Reset total amount
+      totalAmountElement.textContent = `Total: ₹0`;  // Reset total amount display
+    });
+  </script>
+</body>
+</html>
